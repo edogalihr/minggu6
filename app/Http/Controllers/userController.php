@@ -105,3 +105,4 @@ class userController extends Controller
         $User = User::where('name', 'like', "%" . $keyword . "%")->paginate(5);
         return view('userCrud.index', compact('User'))->with('i', (request()->input('page', 1) - 1) * 5);
     }
+}
