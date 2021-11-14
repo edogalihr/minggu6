@@ -18,7 +18,7 @@
                     <br><br>
 
                     <form class="form" method="get" action="{{ route('searchUser') }}">
-                    <div class="form-group w-100 mb-3">
+                    <div class="form-group w-100 mb-1">
                     <label for="search" class="d-block mr-2">Pencarian</label>
                     <input type="text" name="search" class="form-control w-75 d-inline" id="search" placeholder="search data">
                     <button type="submit" class="btn btn-primary mb-1">Cari</button>
@@ -30,6 +30,7 @@
                                 <th>username</th>
                                 <th>name</th>
                                 <th>email</th>
+                                <th>role</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -39,6 +40,7 @@
                                 <td>{{$s->username}}</td>
                                 <td>{{$s->name}}</td>
                                 <td>{{$s->email}}</td>
+                                <td>{{$s->role}}</td>
                                 <td>
                                     <form action="/userCrud/{{$s->id}}" method="post">
                                         <a href="/userCrud/{{$s->id}}/edit" class="btn btn-warning">Edit</a>
